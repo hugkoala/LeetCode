@@ -7,7 +7,7 @@ LeetCode
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [Python](./Solution/Python/Two Sum.py)|Easy|
+|1|[Two Sum](https://oj.leetcode.com/problems/two-sum/)| [Python](./Solution/Python/twoSum.py)|Easy|
 
 
 ### LeetCode Shell
