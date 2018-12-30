@@ -5,19 +5,23 @@ class Solution:
         :rtype: List[List[int]]
         """
         results = list()
-        for i in range(0, len(nums)):
-            num1 = nums[i]
-            nums.remove(nums[i])
-            for j in range(0, len(nums) - 1):
-                num2 = nums[j]
-                nums.remove(nums[j])
-                if 0 - num1 - num2 in nums:
-                    result = [num1, num2, 0 - num1 - num2]
-                    result.sort()
+        nums.sort()
+        for idx, num in enumerate(nums):
+            left_idx = idx + 1
+            right_idx = len(nums) - 1
+
+            while left_idx < right_idx:
+                sum = nums[idx] + nums[left_idx] + nums[right_idx]
+                if sum < 0:
+                    left_idx += 1
+                elif sum > 0:
+                    right_idx -= 1
+                else:
+                    result = [nums[idx], nums[left_idx], nums[right_idx]]
                     if result not in results:
                         results.append(result)
-                nums.insert(j, num2)
-            nums.insert(i, num1)
+                    left_idx += 1
+                    right_idx -= 1
 
         return results
 
