@@ -4,6 +4,30 @@
 #         self.val = x
 #         self.next = None
 
+class TwoPointerListNode:
+    __preNode = None
+    __nextNode = None
+    __own = ListNode(0)
+
+    def __init__(self, own):
+        self.__own = own
+
+    def setPre(self, pre):
+        self.__preNode = pre
+
+    def setNext(self, next):
+        self.__nextNode = next
+
+    def getPre(self):
+        return self.__preNode
+
+    def getNext(self):
+        return self.__nextNode
+
+    def getOwn(self):
+        return self.__own
+
+
 class Solution:
     def removeNthFromEnd(self, head, n):
         """
@@ -11,3 +35,36 @@ class Solution:
         :type n: int
         :rtype: ListNode
         """
+
+        if n == 1:
+            return head.next
+        else:
+            node = head
+            twoPointerHead = TwoPointerListNode(head)
+            twoPointerList = twoPointerHead
+
+            while node.next:
+                nextNode = node.next
+                own = TwoPointerListNode(nextNode)
+                own.setPre(twoPointerList)
+                twoPointerList.setNext(own)
+                # next node
+                node = node.next
+                twoPointerList = twoPointerList.getNext()
+
+        idx = 1
+
+        while True:
+            if idx == n:
+                removeNodeNext = twoPointerList.getNext()
+                removeNodePre = twoPointerList.getPre()
+
+                if removeNodePre:
+                    removeNodePre.getOwn().next = removeNodeNext.getOwn()
+                    return head
+                else:
+                    return head.next
+
+            else:
+                idx += 1
+                twoPointerList = twoPointerList.getPre()
