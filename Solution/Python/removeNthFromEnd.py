@@ -36,21 +36,18 @@ class Solution:
         :rtype: ListNode
         """
 
-        if n == 1:
-            return head.next
-        else:
-            node = head
-            twoPointerHead = TwoPointerListNode(head)
-            twoPointerList = twoPointerHead
+        node = head
+        twoPointerHead = TwoPointerListNode(head)
+        twoPointerList = twoPointerHead
 
-            while node.next:
-                nextNode = node.next
-                own = TwoPointerListNode(nextNode)
-                own.setPre(twoPointerList)
-                twoPointerList.setNext(own)
-                # next node
-                node = node.next
-                twoPointerList = twoPointerList.getNext()
+        while node.next:
+            nextNode = node.next
+            own = TwoPointerListNode(nextNode)
+            own.setPre(twoPointerList)
+            twoPointerList.setNext(own)
+            # next node
+            node = node.next
+            twoPointerList = twoPointerList.getNext()
 
         idx = 1
 
@@ -59,11 +56,15 @@ class Solution:
                 removeNodeNext = twoPointerList.getNext()
                 removeNodePre = twoPointerList.getPre()
 
-                if removeNodePre:
+                if not removeNodePre:
+                    return head.next
+
+                if removeNodeNext:
                     removeNodePre.getOwn().next = removeNodeNext.getOwn()
                     return head
                 else:
-                    return head.next
+                    removeNodePre.getOwn().next = None
+                    return head
 
             else:
                 idx += 1
