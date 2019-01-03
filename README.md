@@ -14,6 +14,7 @@ LeetCode
 |15|[3Sum](https://oj.leetcode.com/problems/3sum/)| [Python](./Solution/Python/threeSum.py)|Medium|Accepted|
 |19|[Remove Nth Node From End of List](https://oj.leetcode.com/problems/remove-nth-node-from-end-of-list/)| [Python](./Solution/Python/removeNthFromEnd.py)|Medium|Accepted|
 |22|[Generate Parentheses](https://oj.leetcode.com/problems/generate-parentheses/)| [Python](./Solution/Python/generateParenthesis.py)|Medium|Accepted|
+|41|[First Missing Positive](https://oj.leetcode.com/problems/first-missing-positive/)| [Python](./Solution/Python/firstMissingPositive.py)|Hard||
 
 
 ### LeetCode Shell
