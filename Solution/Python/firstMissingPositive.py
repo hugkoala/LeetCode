@@ -4,7 +4,7 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-
+        nums.sort()
         for idx in range(0, len(nums)):
             if nums[idx] > 0 and nums[idx] <= len(nums) and nums[idx] != idx + 1:
                 temp = nums[nums[idx] - 1]
