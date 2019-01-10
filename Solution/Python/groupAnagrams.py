@@ -1,6 +1,17 @@
 class Solution(object):
     def groupAnagrams(self, strs):
-        ans = collections.defaultdict(list)
-        for s in strs:
-            ans[tuple(sorted(s))].append(s)
-        return ans.values()
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+
+        groups = dict()
+        for str in strs:
+            group = ''.join(sorted(str))
+            if group in groups.keys():
+                groups[group].append(str)
+            else:
+                groups[group] = list()
+                groups[group].append(str)
+
+        return list(groups.values())
