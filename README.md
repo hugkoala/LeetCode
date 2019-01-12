@@ -19,7 +19,7 @@ LeetCode
 |36|[Valid Sudoku](https://oj.leetcode.com/problems/valid-sudoku/)| [Python](./Solution/Python/isValidSudoku.py)|Medium|Accepted|
 |38|[Count and Say](https://oj.leetcode.com/problems/count-and-say/)| [Python](./Solution/Python/countAndSay.py)|Easy|Accepted|
 |41|[First Missing Positive](https://oj.leetcode.com/problems/first-missing-positive/)| [Python](./Solution/Python/firstMissingPositive.py)|Hard|Accepted|
-|49|[Group Anagrams](https://oj.leetcode.com/problems/group-anagrams/)| [Python](./Solution/Python/groupAnagrams.py)|Medium||
+|49|[Group Anagrams](https://oj.leetcode.com/problems/group-anagrams/)| [Python](./Solution/Python/groupAnagrams.py)|Medium|Accepted|
 
 
 
