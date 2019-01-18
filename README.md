@@ -21,6 +21,7 @@ LeetCode
 |41|[First Missing Positive](https://oj.leetcode.com/problems/first-missing-positive/)| [Python](./Solution/Python/firstMissingPositive.py)|Hard|Accepted|
 |49|[Group Anagrams](https://oj.leetcode.com/problems/group-anagrams/)| [Python](./Solution/Python/groupAnagrams.py)|Medium|Accepted|
 |55|[Jump Game](https://oj.leetcode.com/problems/jump-game/)| [Python](./Solution/Python/canJump.py)|Medium|Accepted|
+|62|[Unique Paths](https://oj.leetcode.com/problems/unique-paths/)| [Python](./Solution/Python/uniquePaths.py)|Medium||
 
 
 
